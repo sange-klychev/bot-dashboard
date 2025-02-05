@@ -1,0 +1,16 @@
+@use '@/shared/variables' as *;
+
+.wrapper {
+	background-color: $bg-primary;
+	min-height: 100dvh;
+	display: flex;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 0 auto;
+}
