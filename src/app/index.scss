@@ -50,7 +50,18 @@ textarea {
 	background: none;
 	border: none;
 	font-family: inherit;
-	color: $text-primary;
+	font-size: inherit;
+	color: inherit;
+	padding: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 
 .container {

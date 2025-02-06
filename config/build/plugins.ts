@@ -1,5 +1,4 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import CopyPlugin from 'copy-webpack-plugin';
 import dotenv from 'dotenv';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -9,12 +8,7 @@ import {Configuration, DefinePlugin, ProgressPlugin} from 'webpack';
 import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 import {BuildOptions} from './types';
 
-export function buildPlugins({
-	mode,
-	paths,
-	analyzer,
-	platform
-}: BuildOptions): Configuration['plugins'] {
+export function buildPlugins({mode, paths, analyzer}: BuildOptions): Configuration['plugins'] {
 	const isDev = mode === 'development';
 	const isProd = mode === 'production';
 
@@ -30,7 +24,6 @@ export function buildPlugins({
 			favicon: path.resolve(paths.public, 'favicon.ico')
 		}),
 		new DefinePlugin({
-			__PLATFORM__: JSON.stringify(platform),
 			__MODE__: JSON.stringify(mode),
 			__APP_TITLE__: JSON.stringify(config?.APP_TITLE),
 			__API_URL__: JSON.stringify(config?.API_URL)
@@ -51,16 +44,6 @@ export function buildPlugins({
 			new MiniCssExtractPlugin({
 				filename: 'css/[name].[contenthash:8].css',
 				chunkFilename: 'css/[name].[contenthash:8].css'
-			})
-		);
-		plugins.push(
-			new CopyPlugin({
-				patterns: [
-					{
-						from: path.resolve(paths.public, 'locales'),
-						to: path.resolve(paths.output, 'locales')
-					}
-				]
 			})
 		);
 		if (analyzer) {

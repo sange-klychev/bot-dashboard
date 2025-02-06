@@ -7,13 +7,11 @@ import styles from './app.module.scss';
 export function App() {
 	return (
 		<div className={clsx(styles.wrapper)}>
-			<div className={clsx('container', styles.main)}>
-				<Header />
-				<div className={styles.content}>
-					<Outlet />
-				</div>
-				<Navigation />
+			<Header />
+			<div className={clsx('container', styles.content)}>
+				<Outlet />
 			</div>
+			<Navigation />
 		</div>
 	);
 }

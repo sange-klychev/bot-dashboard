@@ -1,16 +1,12 @@
 {
-	"name": "webpack-course",
+	"name": "bot-dashboard",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "concurrently \"npm run start:client\" \"npm run start:server\"",
-		"start:client": "webpack serve --env mode=development",
-		"start:server": "json-server --watch data.min.json --port 3001",
+		"start": "webpack serve --env mode=development",
 		"build:dev": "webpack --env mode=development",
-		"build:prod": "webpack --env mode=production",
-		"build:mobile": "webpack --env mode=production --env platform=mobile",
-		"build:desktop": "webpack --env mode=production --env platform=desktop"
+		"build:prod": "webpack --env mode=production"
 	},
 	"keywords": [],
 	"author": "",
@@ -28,13 +24,11 @@
 		"@types/webpack": "^5.28.5",
 		"@types/webpack-bundle-analyzer": "^4.7.0",
 		"babel-loader": "^9.2.1",
-		"concurrently": "^9.1.2",
 		"copy-webpack-plugin": "^12.0.2",
 		"css-loader": "^7.1.2",
 		"dotenv": "^16.4.7",
 		"fork-ts-checker-webpack-plugin": "^9.0.2",
 		"html-webpack-plugin": "^5.6.3",
-		"json-server": "^1.0.0-beta.3",
 		"mini-css-extract-plugin": "^2.9.2",
 		"react-refresh": "^0.16.0",
 		"react-refresh-typescript": "^2.0.10",
@@ -51,6 +45,7 @@
 	"dependencies": {
 		"@svgr/webpack": "^8.1.0",
 		"clsx": "^2.1.1",
+		"lucide-react": "^0.474.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-router": "^7.1.1",

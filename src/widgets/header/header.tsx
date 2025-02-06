@@ -1,5 +1,5 @@
 import {clsx} from 'clsx';
-import {useEffect} from 'react';
+import {Menu, RefreshCw} from 'lucide-react';
 import styles from './header.module.scss';
 
 interface Props {
@@ -10,10 +10,20 @@ export function Header({className}: Props) {
 	const pageTitle = localStorage.getItem('pageTitle') || '';
 
 	return (
-		<header className={clsx(styles.header, className)}>
-			<button>Burger</button>
+		<header className={clsx('container', styles.header, className)}>
+			<button className={styles.burger}>
+				<Menu
+					size={36}
+					strokeWidth={1.25}
+				/>
+			</button>
 			<h1 className={clsx(styles.title)}>{pageTitle}</h1>
-			<button>Refresh</button>
+			<button className={styles.refresh}>
+				<RefreshCw
+					size={34}
+					strokeWidth={1.25}
+				/>
+			</button>
 		</header>
 	);
 }

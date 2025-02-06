@@ -9,10 +9,7 @@ export const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{
-				path: '/dashboard',
-				handle: () => {
-					console.log('dashboard');
-				},
+				index: true,
 				element: (
 					<Suspense fallback={<div>Loading...</div>}>
 						<Dashboard />
