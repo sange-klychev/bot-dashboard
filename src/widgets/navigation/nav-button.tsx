@@ -1,19 +1,26 @@
 import {clsx} from 'clsx';
 import {ReactNode} from 'react';
+import {NavLink} from 'react-router';
 import styles from './navigation.module.scss';
 
 interface Props {
 	title: string;
 	icon: ReactNode;
 	badge?: number;
+	path: string;
 }
 
-export function NavButton({title, icon, badge}: Props) {
+export function NavButton({button}: {button: Props}) {
+	const {title, icon, badge, path} = button;
 	return (
-		<button className={clsx(styles.button)}>
+		<NavLink
+			className={({isActive}) => clsx(styles.button, {[styles.active]: isActive})}
+			to={path}
+			state={{pageTitle: title}}
+		>
 			{icon}
 			<span>{title}</span>
 			{badge && <span className={styles.badge}>{badge}</span>}
-		</button>
+		</NavLink>
 	);
 }

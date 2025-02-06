@@ -1,5 +1,6 @@
 import {clsx} from 'clsx';
 import {Menu, RefreshCw} from 'lucide-react';
+import {useLocation} from 'react-router';
 import styles from './header.module.scss';
 
 interface Props {
@@ -7,7 +8,8 @@ interface Props {
 }
 
 export function Header({className}: Props) {
-	const pageTitle = localStorage.getItem('pageTitle') || '';
+	const location = useLocation();
+	const pageTitle = location.state?.pageTitle;
 
 	return (
 		<header className={clsx('container', styles.header, className)}>

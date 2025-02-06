@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import {useLocation} from 'react-router';
 
-export function Dashboard() {
+export function CoinPrices() {
 	return <div className={clsx('')}>Content</div>;
 }

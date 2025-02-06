@@ -7,6 +7,7 @@ export function Navigation() {
 	const navButtons = [
 		{
 			title: 'Dashboard',
+			path: '/',
 			icon: (
 				<List
 					size={48}
@@ -16,6 +17,7 @@ export function Navigation() {
 		},
 		{
 			title: 'Megabot',
+			path: '/megabot',
 			icon: (
 				<ChartNetwork
 					size={48}
@@ -25,6 +27,7 @@ export function Navigation() {
 		},
 		{
 			title: 'Bot market',
+			path: '/bot-market',
 			icon: (
 				<ShoppingCart
 					size={48}
@@ -34,6 +37,7 @@ export function Navigation() {
 		},
 		{
 			title: 'Coin prices',
+			path: '/coin-prices',
 			icon: (
 				<CircleDollarSign
 					size={48}
@@ -43,6 +47,7 @@ export function Navigation() {
 		},
 		{
 			title: 'Profile',
+			path: '/profile',
 			badge: 3,
 			icon: (
 				<Cog
@@ -58,9 +63,7 @@ export function Navigation() {
 				{navButtons.map((button) => (
 					<NavButton
 						key={button.title}
-						title={button.title}
-						icon={button.icon}
-						badge={button.badge}
+						button={button}
 					/>
 				))}
 			</div>
