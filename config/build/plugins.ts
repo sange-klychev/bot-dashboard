@@ -51,7 +51,7 @@ export function buildPlugins({mode, paths, analyzer}: BuildOptions): Configurati
 			new CopyPlugin({
 				patterns: [
 					{
-						from: path.resolve(paths.rootFolder, 'data.min.json'),
+						from: path.resolve(paths.src, 'data.min.json'),
 						to: path.resolve(paths.output, 'data.min.json')
 					}
 				]

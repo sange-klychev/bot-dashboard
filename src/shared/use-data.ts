@@ -1,4 +1,5 @@
 import {DashboardDto} from './types';
+import file from '@/data.min.json';
 
 export interface IDataReturn {
 	data: DashboardDto | null;
@@ -7,7 +8,7 @@ export interface IDataReturn {
 }
 
 export const useData = (): IDataReturn => {
-	const botsData = localStorage.getItem('bots_data');
+	const botsData = JSON.stringify(file);
 
 	if (!botsData) {
 		return {data: null, dataset: null, dataLabels: []};
