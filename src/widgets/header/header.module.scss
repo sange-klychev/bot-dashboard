@@ -18,3 +18,12 @@
 .refresh {
 	color: $text-secondary;
 }
+
+@media (max-width: 450px) {
+	.header {
+		padding-top: 20px;
+	}
+	.title {
+		font-size: 2rem;
+	}
+}

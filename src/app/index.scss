@@ -8,6 +8,7 @@
 
 html {
 	scroll-behavior: smooth;
+	height: 100%;
 }
 
 @media screen and (prefer-reduced-motion: reduce) {
@@ -18,11 +19,13 @@ html {
 
 body {
 	margin: 0;
+	height: 100%;
 	font-size: 16px;
 	font-family: 'Roboto', 'Open-Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $text-primary;
+	overflow-x: hidden;
 }
 
 a {
@@ -69,4 +72,10 @@ img {
 	width: 100%;
 	padding: 0 25px;
 	margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+	.container {
+		padding: 0 15px;
+	}
 }

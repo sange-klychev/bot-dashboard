@@ -5,6 +5,7 @@ export interface BuildPaths {
 	public: string;
 	src: string;
 	config: string;
+	rootFolder: string;
 }
 export type BuildMode = 'production' | 'development';
 

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
 
 export function CoinPrices() {
-	return <div className={clsx('')}>Content</div>;
+	return <div className={clsx('container')}>Content</div>;
 }

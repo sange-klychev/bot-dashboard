@@ -1,4 +1,5 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 import dotenv from 'dotenv';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -44,6 +45,16 @@ export function buildPlugins({mode, paths, analyzer}: BuildOptions): Configurati
 			new MiniCssExtractPlugin({
 				filename: 'css/[name].[contenthash:8].css',
 				chunkFilename: 'css/[name].[contenthash:8].css'
+			})
+		);
+		plugins.push(
+			new CopyPlugin({
+				patterns: [
+					{
+						from: path.resolve(paths.rootFolder, 'data.min.json'),
+						to: path.resolve(paths.output, 'data.min.json')
+					}
+				]
 			})
 		);
 		if (analyzer) {

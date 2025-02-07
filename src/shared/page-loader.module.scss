@@ -8,7 +8,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+}
+.loaderIcon {
 	transform-origin: center;
 	animation: loader 1.5s linear infinite;
 }

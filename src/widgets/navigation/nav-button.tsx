@@ -2,6 +2,7 @@ import {clsx} from 'clsx';
 import {ReactNode} from 'react';
 import {NavLink} from 'react-router';
 import styles from './navigation.module.scss';
+import {useDetectMobileScreen} from '@/shared/use-detect-mobile-screen';
 
 interface Props {
 	title: string;
@@ -11,6 +12,8 @@ interface Props {
 }
 
 export function NavButton({button}: {button: Props}) {
+	const isMobile = useDetectMobileScreen();
+
 	const {title, icon, badge, path} = button;
 	return (
 		<NavLink
@@ -19,7 +22,7 @@ export function NavButton({button}: {button: Props}) {
 			state={{pageTitle: title}}
 		>
 			{icon}
-			<span>{title}</span>
+			{!isMobile && <span>{title}</span>}
 			{badge && <span className={styles.badge}>{badge}</span>}
 		</NavLink>
 	);

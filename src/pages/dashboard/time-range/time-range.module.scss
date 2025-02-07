@@ -1,10 +1,14 @@
 @use '@/shared/variables' as *;
 
-.ranges {
+.timeRange {
 	display: flex;
 	align-items: center;
 	column-gap: 15px;
 	margin-bottom: 30px;
+}
+.ranges {
+	display: flex;
+	column-gap: 15px;
 }
 .title {
 	font-size: 22px;
@@ -24,4 +28,22 @@
 	color: $text-primary;
 	border-color: $text-primary;
 	font-weight: 700;
+}
+
+@media (max-width: 610px) {
+	.title {
+		font-size: 16px;
+	}
+	.button {
+		font-size: 14px;
+		min-width: 60px;
+	}
+}
+
+@media (max-width: 450px) {
+	.timeRange {
+		flex-direction: column;
+		row-gap: 15px;
+		align-items: flex-start;
+	}
 }

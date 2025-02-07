@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import {MouseEvent} from 'react';
-import {useData} from '../../shared/use-data';
+import {useData} from '../../../shared/use-data';
 import {Bot} from './bot';
 import styles from './bot.module.scss';
 

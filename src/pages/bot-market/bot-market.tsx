@@ -1,5 +1,5 @@
 import clsx from 'clsx';
 
 export function BotMarket() {
-	return <div className={clsx('')}>Content</div>;
+	return <div className={clsx('container')}>Content</div>;
 }

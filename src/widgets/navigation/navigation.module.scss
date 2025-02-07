@@ -40,3 +40,16 @@
 	background-color: $badge-bg;
 	color: $text-primary;
 }
+
+@media (max-width: 450px) {
+	.navigation {
+		height: 60px;
+	}
+	.badge {
+		width: 20px;
+		height: 20px;
+		font-size: 14px;
+		top: -8px;
+		right: -8px;
+	}
+}

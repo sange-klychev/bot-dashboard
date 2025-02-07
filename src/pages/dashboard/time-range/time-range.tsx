@@ -21,17 +21,19 @@ export const TimeRange = () => {
 	};
 
 	return (
-		<div className={clsx('container', styles.ranges)}>
+		<div className={clsx('container', styles.timeRange)}>
 			<div className={clsx(styles.title)}>Time Range:</div>
-			{timeRanges.map(({id, name}) => (
-				<TimeRangeButton
-					key={id}
-					name={name}
-					id={id}
-					value={range}
-					onClick={handleClick}
-				/>
-			))}
+			<div className={clsx(styles.ranges)}>
+				{timeRanges.map(({id, name}) => (
+					<TimeRangeButton
+						key={id}
+						name={name}
+						id={id}
+						value={range}
+						onClick={handleClick}
+					/>
+				))}
+			</div>
 		</div>
 	);
 };

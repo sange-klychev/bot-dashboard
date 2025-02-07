@@ -1,14 +1,19 @@
+import {useDetectMobileScreen} from '@/shared/use-detect-mobile-screen';
 import {ChartNetwork, CircleDollarSign, Cog, List, ShoppingCart} from 'lucide-react';
 
 export const useNav = () => {
+	const isMobile = useDetectMobileScreen();
+	const iconSize = isMobile ? 30 : 48;
+	const strokeWidth = 1.25;
+
 	const navButtons = [
 		{
 			title: 'Dashboard',
 			path: '/',
 			icon: (
 				<List
-					size={48}
-					strokeWidth={1.25}
+					size={iconSize}
+					strokeWidth={strokeWidth}
 				/>
 			)
 		},
@@ -17,8 +22,8 @@ export const useNav = () => {
 			path: '/megabot',
 			icon: (
 				<ChartNetwork
-					size={48}
-					strokeWidth={1.25}
+					size={iconSize}
+					strokeWidth={strokeWidth}
 				/>
 			)
 		},
@@ -27,8 +32,8 @@ export const useNav = () => {
 			path: '/bot-market',
 			icon: (
 				<ShoppingCart
-					size={48}
-					strokeWidth={1.25}
+					size={iconSize}
+					strokeWidth={strokeWidth}
 				/>
 			)
 		},
@@ -37,8 +42,8 @@ export const useNav = () => {
 			path: '/coin-prices',
 			icon: (
 				<CircleDollarSign
-					size={48}
-					strokeWidth={1.25}
+					size={iconSize}
+					strokeWidth={strokeWidth}
 				/>
 			)
 		},
@@ -48,8 +53,8 @@ export const useNav = () => {
 			badge: 3,
 			icon: (
 				<Cog
-					size={48}
-					strokeWidth={1.25}
+					size={iconSize}
+					strokeWidth={strokeWidth}
 				/>
 			)
 		}
