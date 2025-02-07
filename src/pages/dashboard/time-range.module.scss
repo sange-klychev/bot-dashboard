@@ -1,0 +1,27 @@
+@use '@/shared/variables' as *;
+
+.ranges {
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+	margin-bottom: 30px;
+}
+.title {
+	font-size: 22px;
+	color: $text-secondary;
+	font-weight: 700;
+}
+.button {
+	color: $text-secondary;
+	padding: 10px 5px;
+	border: 1px solid $text-secondary;
+	border-radius: 30px;
+	font-size: 18px;
+	min-width: 90px;
+}
+
+.active {
+	color: $text-primary;
+	border-color: $text-primary;
+	font-weight: 700;
+}

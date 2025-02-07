@@ -1,4 +1,5 @@
 import {BotMarket, CoinPrices, Dashboard, MegaBot, Profile} from '@/pages';
+import {PageLoader} from '@/shared/page-loader';
 import {PageTitle} from '@/shared/page-title';
 import {Suspense} from 'react';
 import {createBrowserRouter} from 'react-router';
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
 			{
 				index: true,
 				element: (
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<PageLoader />}>
 						<PageTitle title='Dashboard' />
 						<Dashboard />
 					</Suspense>
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
 			{
 				path: 'megabot',
 				element: (
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<PageLoader />}>
 						<PageTitle title='Megabot' />
 						<MegaBot />
 					</Suspense>
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
 			{
 				path: 'bot-market',
 				element: (
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<PageLoader />}>
 						<PageTitle title='Bot market' />
 						<BotMarket />
 					</Suspense>
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
 			{
 				path: 'coin-prices',
 				element: (
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<PageLoader />}>
 						<PageTitle title='Coin prices' />
 						<CoinPrices />
 					</Suspense>
@@ -48,7 +49,7 @@ export const router = createBrowserRouter([
 			{
 				path: 'profile',
 				element: (
-					<Suspense fallback={<div>Loading...</div>}>
+					<Suspense fallback={<PageLoader />}>
 						<PageTitle title='Profile' />
 						<Profile />
 					</Suspense>

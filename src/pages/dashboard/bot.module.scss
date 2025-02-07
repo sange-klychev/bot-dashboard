@@ -1,0 +1,44 @@
+@use '@/shared/variables' as *;
+
+.bots {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2px;
+	margin-bottom: 30px;
+}
+.bot {
+	width: 100%;
+	padding: 20px;
+	background-color: $bg-secondary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+	svg {
+		width: 90px;
+		height: 70px;
+		margin-bottom: 20px;
+	}
+}
+.megabot svg {
+	height: 90px;
+	margin-bottom: 5px;
+}
+.title {
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.percent {
+	color: #5faa53;
+	font-weight: 700;
+}
+.negative {
+	color: #ed427c;
+}
+.empty {
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+	color: $text-secondary;
+}

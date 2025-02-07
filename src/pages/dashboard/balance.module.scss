@@ -1,0 +1,31 @@
+@use '@/shared/variables' as *;
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.capitalWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.title {
+	font-size: 36px;
+	color: $text-secondary;
+	font-weight: 700;
+}
+.capital,
+.currency {
+	font-size: 56px;
+}
+.currency {
+	margin-left: 10px;
+}
+.balance {
+	font-size: 24px;
+	font-weight: 700;
+}
+.balanceTitle {
+	color: $text-secondary;
+	margin-right: 10px;
+}

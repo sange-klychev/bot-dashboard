@@ -8,7 +8,7 @@ export function App() {
 	return (
 		<div className={clsx(styles.wrapper)}>
 			<Header />
-			<div className={clsx('container', styles.content)}>
+			<div className={clsx(styles.content)}>
 				<Outlet />
 			</div>
 			<Navigation />

@@ -1,0 +1,14 @@
+@keyframes loader {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	transform-origin: center;
+	animation: loader 1.5s linear infinite;
+}

@@ -3,16 +3,12 @@ import {Menu, RefreshCw} from 'lucide-react';
 import {useLocation} from 'react-router';
 import styles from './header.module.scss';
 
-interface Props {
-	className?: string;
-}
-
-export function Header({className}: Props) {
+export function Header() {
 	const location = useLocation();
-	const pageTitle = location.state?.pageTitle;
+	const pageTitle = location.state?.pageTitle || 'Dashboard';
 
 	return (
-		<header className={clsx('container', styles.header, className)}>
+		<header className={clsx('container', styles.header)}>
 			<button className={styles.burger}>
 				<Menu
 					size={36}
